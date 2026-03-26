@@ -588,7 +588,7 @@ const EmailPreview = ({
 
   React.useEffect(() => {
     if (isEditing) setTimeout(() => selfRef.current?.scrollIntoView({ behavior: "smooth" }), 500);
-  });
+  }, [isEditing]);
 
   return (
     <section className="flex flex-col gap-4" ref={selfRef}>
